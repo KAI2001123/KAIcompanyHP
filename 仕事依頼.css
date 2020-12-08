@@ -1,0 +1,141 @@
+body{
+    height:100vh;
+    min-width:100vh;
+    margin:0;
+    box-sizing:border-box;
+}
+aside{
+    height:100px;
+    position:fixed;
+    min-width:100%;
+    background-color:rgba(6, 199, 64, 0.835);
+    display:flex;
+
+}
+.company{
+    padding-left:20px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size:40px;
+    color:blue;
+    font-family:impact;
+    margin:0;
+}
+
+nav{
+    width:400%;
+    padding-top:20px;
+}
+ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-around;
+    width:110%;
+}
+li a:hover{
+    background-color:rgba(31, 31, 245, 0.424);
+}
+li{
+    margin-right:3%;
+}
+.job{
+    width:300px;
+}
+main{
+    height:100vh;
+    padding-top:100px;
+}
+.companyname{
+    display:none;
+}
+div{
+        margin-left:50px;
+        margin-right:50px;
+}
+
+
+footer{
+    height:150px;
+    margin-top:auto;
+    background-color:rgba(38, 60, 255, 0.63);
+}
+.open,.close{
+    display: none;
+}
+input[type="checkbox"]{
+    position: absolute;
+    right: 200%;
+} 
+ @media screen and (max-width : 1025px ) {
+     body{
+        font-size:2rem;
+        width:100vh;
+     }
+     aside{
+        display: flex;
+        position: absolute;
+        top:-200%;
+        flex-direction:column;
+        background-color:rgb(83, 238, 83);
+    
+    }
+    .job{
+        width:500px;
+    }
+    ul{
+        display:flex;
+        flex-direction:column;
+        width:30%;
+        height:70%;
+    }
+    nav{
+        background-color:rgb(83, 238, 83);
+        width:100%;
+    }
+    .company{
+        background:rgb(83, 238, 83);
+        width:90%;
+        font-size:100px;
+    }
+    main{
+        padding-top: 120px;
+
+    }
+    .companyname{
+        display:block;
+        padding-left:130px;
+        height:120px;
+        display:flex;
+        align-items: center;
+        color:blue;
+        font-family: impact;
+        background-color:rgb(83, 238, 83);
+    }
+    .open,
+    .close{
+        display: block;
+        font-size:80px;
+        padding-left:30px;
+    }
+    .open{
+        position: absolute;
+        position: fixed;
+        background-color:white;
+
+    }
+    input[type="checkbox"]:checked ~ aside{
+        top: 0;
+        transition: all 0.3s;
+        width:180%;
+        height:50%;
+    }  
+    input[type="checkbox"]:checked ~ .back{
+        position:absolute;
+        width:180%;
+        height:180%;
+        background-color:rgba(73, 73, 73, 0.685);
+    }
+
+}
